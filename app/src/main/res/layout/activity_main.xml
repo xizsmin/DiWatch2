@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+    <TextView
+        android:id="@+id/clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="48sp"
+        android:text="00:00:00"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="@android:dimen/app_icon_size"/>
+
+
+    <LinearLayout
+        android:id = "@+id/button_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/clock"
+        android:layout_centerHorizontal="true">
+    <ToggleButton
+        android:id="@+id/timer_button"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="Recording"
+        android:textOff="Stopped"/>
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_below="@id/clock"
+        android:layout_toRightOf="@+id/timer_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"/>
+    </LinearLayout>
+
+
+
+    <ListView
+        android:id="@+id/timerecords_listview"
+        android:layout_below="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/colorAccent">
+    </ListView>
+
+</RelativeLayout>
