@@ -61,8 +61,6 @@ class MainActivity : AppCompatActivity() {
         val timerecord_listview_adapter = TimeRecordsListAdapter(this, R.layout.list_adapter, timerecord_list)
         timerecords_listview.adapter = timerecord_listview_adapter
 
-
-
         registerReceiver(messageReceiver, intentFilter)
 
         timer_button.setOnCheckedChangeListener { buttonView, isChecked ->
